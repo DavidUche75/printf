@@ -24,9 +24,9 @@
  * @fmt: The format.
  * @fn: The function associated.
  */
-struct fmat
+struct fmt
 {
-	char fmat;
+	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
@@ -37,10 +37,10 @@ struct fmat
  * @fmt: The format.
  * @fm_t: The function associated.
  */
-typedef struct fmat fmat_t;
+typedef struct fmt fmt_t;
 
 int _printf(const char *format, ...);
-int handle_print(const char *fmat, int *i,
+int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
 /****************** FUNCTIONS ******************/
